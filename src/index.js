@@ -47,5 +47,6 @@ const server = new ApolloServer({
 server.applyMiddleware({app, path: '/graphql'});
 
 app.listen(5000, () => {
+  // TODO: mongodb connection approach is deprecated
   mongoose.connect('mongodb://localhost:27017/graphql');
 });
